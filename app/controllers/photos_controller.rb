@@ -4,6 +4,6 @@ class PhotosController < ApplicationController
   end
 
   def show
-
+    @photo = @@database[params[:id].to_i]
   end
 end
