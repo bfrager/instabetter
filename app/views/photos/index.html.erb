@@ -1,6 +1,7 @@
 <h1>Instabetter</h1>
 <div>
-  <% @photos.each do |p| %>
-  <img class="thumbnails" alt="<%= p[:title] %>" title="<%= p[:title] %>" src="<%= p[:url] %>">
+  <% @photos.each_with_index do |p,index| %>
+  <a href="/photos/<%=index%>"><img class="thumbnails" alt="<%= p[:title] %>" title="<%= p[:title] %>" src="<%= p[:url] %>">
+</a>
 <% end %>
 </div>
