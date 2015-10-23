@@ -1,5 +1,6 @@
 <h1>Instabetter</h1>
 <div>
-
-  <img alt="<%= @photos[0][:title] %>" title="<%= @photos[0][:title] %>" src="<%= @photos[0][:url] %>">
+  <% @photos.each do |p| %>
+  <img alt="<%= p[:title] %>" title="<%= p[:title] %>" src="<%= p[:url] %>">
+<% end %>
 </div>
